@@ -26,19 +26,25 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 -------------- **/
 
 body {
-    min-height: 100vh;
     font-family: var(--ff-antonio);
     transition: 0.3s;
 
     color: var(--clr-neutral-900);
     background-color: var(--clr-neutral-100);
+    position: relative;
+    overflow-x: hidden;
 }
 
-main {
-    background-image: url(/assets/blob-background.svg);
+.blob {
+    position: absolute;
+    top: -30%;
+    left: 10%;
+    z-index: -1;
+    background: url(/assets/blob-background.svg);
     background-repeat: no-repeat;
-    background-position: 50% 350%;
-    background-size: 120% 120%;
+    width: 120%;
+    height: 120%;
+    overflow: hidden;
 }
 
 header {
@@ -136,8 +142,14 @@ header {
     font-size: 0.875rem;
 }
 
-/*-- hero --*/
+/** ---------
+    Slider
+--------- **/
 
+.slider {
+    background-color: var(--clr-neutral-800);
+    height: 10vh;
+}
 
 /** --------------
     Dark theme 
@@ -259,8 +271,8 @@ header {
 .section-cta .content {
     font-size: 1rem;
     color: var(--clr-neutral-400);
-    max-width: 60ch;
-    line-height: 1.5;
+    max-width: 57ch;
+    line-height: 2;
     padding: 1rem 0 0.5rem 0;
 }
 
@@ -298,10 +310,16 @@ header {
 }
 
 /* -- hidden / show -- */
-.hidden {
+.fade {
     opacity: 0;
     filter: blur(20px);
-    transform: translateX(-30%);
+    transition: all 1.5s;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-10%);
     transition: all 1.5s;
 }
 
