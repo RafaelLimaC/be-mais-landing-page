@@ -29,12 +29,15 @@ body {
     min-height: 100vh;
     font-family: var(--ff-antonio);
     transition: 0.3s;
+
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-neutral-100);
 }
 
 header {
     max-width: 1040px;
     margin: 0 auto;
-    padding: 0 3rem;
+    padding: 0 1rem;
 }
 
 .header-wrapper {
@@ -124,7 +127,47 @@ header {
     font-size: 0.875rem;
 }
 
-/* Dark theme */
+/** --------------
+   Hero section
+-------------- **/
+
+.hero {
+    max-width: 1040px;
+    margin: 4.5rem auto;
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero-cta h1 {
+    font-size: 3rem;
+    font-weight: var(--fw-bold);
+    max-width: 16ch;
+    line-height: 1.3;
+}
+
+.hero-cta h1 strong {
+    color: var(--clr-primary-400);
+}
+
+.hero-cta p {
+    font-size: 0.9rem;
+    color: var(--clr-neutral-400);
+    max-width: 60ch;
+    line-height: 1.5;
+}
+
+/** --------------
+    Dark theme 
+-------------- **/
 
 .dark {
     background-color: var(--clr-neutral-900);
@@ -134,4 +177,25 @@ header {
 .dark .label-checkbox .ball {
     background-color: #495364;
     border: 2px solid #FFFFFF;
+}
+
+/** --------
+    Utils 
+-------- **/
+
+.cta-button {
+    cursor: pointer;
+    padding: 0.75em 1.5em 0.875em 1.5em;
+    font-size: 0.875rem;
+    width: fit-content;
+    border-radius: 9999px;
+    background-color: var(--clr-accent-400);
+    color: var(--clr-neutral-100);
+    box-shadow: none;
+    transition: box-shadow 0.2s;
+    
+}
+
+.cta-button:hover {
+    box-shadow: 0px 3px 16px #FD6F4D80;
 }
