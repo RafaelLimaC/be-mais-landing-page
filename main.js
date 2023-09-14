@@ -34,3 +34,6 @@ const observer = new IntersectionObserver((entries) => {
 })
 
 hiddenElements.forEach((el) => observer.observe(el));
+
+const copy = document.querySelector(".card-wrapper").cloneNode(true);
+document.querySelector(".auto-slider").appendChild(copy);
