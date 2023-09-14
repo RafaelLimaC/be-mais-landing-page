@@ -17,8 +17,13 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     --clr-accent-400: #FD6F4D;
 
     --fw-regular: 400;
+    --fw-semi-bold: 600;
     --fw-bold: 700;
 
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -71,6 +76,33 @@ header {
 
     font-size: 0.9rem;
     line-height: 2;
+}
+
+.header-nav ul li {
+    cursor: pointer;
+    position: relative;
+}
+
+.header-nav ul li a {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: var(--clr-neutral-600);
+}
+
+.header-nav li:before {
+    content: "";
+    display: block;
+    height: 2.5px;
+    background: var(--clr-primary-400);
+    position: absolute;
+    bottom: -0.1rem;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.header-nav li:hover:before {
+    width: 100%;
 }
 
 /** toggle button **/
@@ -290,6 +322,94 @@ header {
     }
 }
 
+/** ----------------
+  section clientes 
+---------------- **/
+
+.clientes {
+    max-width: 1040px;
+    margin: 8rem auto;
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.clientes-wrapper {
+    border-radius: 25px;
+    background-color: var(--clr-neutral-200);
+}
+
+.dark .clientes-wrapper {
+    border-radius: 25px;
+    background-color: var(--clr-neutral-800);
+}
+
+.clientes-conteudo {
+    display: flex;
+    align-items: center;
+    padding: 3rem 10%;
+    gap: 3rem;
+}
+
+.dark .clientes-img__empresa {
+    filter: invert(100%);
+    width: 170px;
+    height: 30px;
+}
+
+.clientes-img__empresa {
+    filter: invert(0);
+    width: 170px;
+    height: 30px;
+}
+
+.clientes-testimonial {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.clientes-texto {
+    color: var(--clr-neutral-400);
+    line-height: 2;
+}
+
+.clientes-nome {
+    font-weight: var(--fw-semi-bold);
+}
+
+.clientes-titulo {
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 3rem 0 2rem 0;
+    position: relative;
+}
+
+.clientes-titulo::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-70%);
+    bottom: 0;
+    width: 57px;
+    height: 5px;
+    background-color: var(--clr-primary-400);   
+}
+
+.clientes-titulo::after {
+    content: "+";
+    position: absolute;
+    bottom: 11px;
+    left: 50%;
+    transform: translateX(90%);
+    color: var(--clr-primary-400);
+    font-size: 3.75rem;
+    line-height: 0;
+}
+
 /** --------------
     Dark theme 
 -------------- **/
@@ -306,6 +426,22 @@ header {
 .dark .label-checkbox .ball {
     background-color: #495364;
     border: 2px solid #FFFFFF;
+}
+
+.dark .header-nav li:hover a {
+    color: var(--clr-neutral-100);
+}
+
+.header-nav li:hover a {
+    color: var(--clr-neutral-900);
+}
+
+.nav-link .active {
+    color: var(--clr-neutral-900);
+}
+
+.dark .active {
+    color: var(--clr-neutral-100);
 }
 
 /** --------
@@ -380,7 +516,9 @@ header {
 }
 
 .hero {
-    padding-top: 6rem;
+    padding-top: 10.5rem;
+    padding-bottom: 4.5rem;
+    margin: 0 auto;
     overflow: visible;
 }
 

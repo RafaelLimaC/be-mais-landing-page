@@ -1,3 +1,5 @@
+// toggleDarkMode()
+
 const chk = document.getElementById('chk');
 const logo = document.getElementById('logo')
 
@@ -16,12 +18,27 @@ function toggleLogo() {
     }
 }
 
-// toggleDarkMode()
-
 chk.addEventListener('change', () => {
 	toggleDarkMode();
     toggleLogo();
 });
+
+// navbar link active
+
+const links = document.querySelectorAll('.nav-link');
+    
+if (links.length) {
+    links.forEach((link) => {
+        link.addEventListener('click', () => {
+            links.forEach((link) => {
+                link.classList.remove('active');
+            });
+            link.classList.add('active');
+        });
+    });
+}
+
+// efeito movimento e blur
 
 const hiddenElements = document.querySelectorAll('.hidden')
 
@@ -34,6 +51,8 @@ const observer = new IntersectionObserver((entries) => {
 })
 
 hiddenElements.forEach((el) => observer.observe(el));
+
+// clonar slider p/ efeito infinito
 
 const copy = document.querySelector(".card-wrapper").cloneNode(true);
 document.querySelector(".auto-slider").appendChild(copy);
