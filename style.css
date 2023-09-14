@@ -237,16 +237,33 @@ header {
     flex-direction: column;
     justify-content: space-around;
     border-radius: 22px;
-    background-color: rgb(90 228 167 / 0.32);
     padding: 30px;
     box-sizing: border-box;
+}
 
+.slider-verde {
+    background-color: rgb(90 228 167 / 0.32);
+    color: #47B484;
+}
+
+.slider-laranja {
+    background-color: rgb(255 142 120 / 0.32);
+    color: #FF8E78;
+}
+
+.slider-azul {
+    background-color: rgb(2 171 229 / 0.32);
+    color: #02ABE5;
+}
+
+.slider-branco {
+    background-color: rgb(191 191 191 / 0.32);
+    color: #1A2E35;
 }
 
 .slider-card span {
     font-size: 1.2rem;
     font-weight: var(--fw-bold);
-    color: #47B484;
     max-width: 7ch;
 }
 
@@ -462,8 +479,8 @@ header {
     transform: translateX(0);
 }
 
-@media (prefers-reduced-motion) {
+/* @media (prefers-reduced-motion) {
     .hidden {
         transition: none;
     }
-}
+} */
