@@ -316,10 +316,24 @@ header {
     transition: all 1.5s;
 }
 
-.hidden {
+.efeito-esquerda {
     opacity: 0;
     filter: blur(10px);
     transform: translateX(-10%);
+    transition: all 1.5s;
+}
+
+.efeito-direita {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(10%);
+    transition: all 1.5s;
+}
+
+.efeito-blur {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(0);
     transition: all 1.5s;
 }
 
@@ -329,8 +343,8 @@ header {
     transform: translateX(0);
 }
 
-/* @media (prefers-reduced-motion) {
+@media (prefers-reduced-motion) {
     .hidden {
         transition: none;
     }
-} */
+}
