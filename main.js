@@ -37,3 +37,15 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 const copy = document.querySelector(".card-wrapper").cloneNode(true);
 document.querySelector(".auto-slider").appendChild(copy);
+
+
+// parallax
+
+const bg = document.getElementById('bg');
+const parallax = document.getElementById('parallax');
+
+window.addEventListener('scroll', function() {
+    let value = window.scrollY;
+    parallax.style.top = 200 - value * 0.5 + 'px';
+    parallax.style.left = 350 - value * 0.2 + 'px';
+})

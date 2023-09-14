@@ -21,10 +21,6 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 }
 
-/** --------------
-    CSS header 
--------------- **/
-
 body {
     font-family: var(--ff-antonio);
     transition: 0.3s;
@@ -34,6 +30,10 @@ body {
     position: relative;
     overflow-x: hidden;
 }
+
+/** --------------
+    CSS header 
+-------------- **/
 
 header {
     position: fixed;
@@ -368,6 +368,16 @@ header {
     gap: 2rem;
 }
 
+.hero figure {
+    position: relative;
+}
+
+.parallax {
+    position: absolute;
+    top: 200px;
+    left: 350px;
+}
+
 .section-cta h1 {
     font-size: 3rem;
     font-weight: var(--fw-bold);
@@ -419,7 +429,7 @@ header {
 
 .cta-button {
     cursor: pointer;
-    padding: 0.75em 1.5em 0.875em 1.5em;
+    padding: 1em 3em;
     font-size: 0.8rem;
     width: fit-content;
     border-radius: 9999px;
