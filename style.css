@@ -6,7 +6,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 
     --clr-neutral-100: #FFFFFF;
-    --clr-neutral-200: #FCFCFC;
+    --clr-neutral-200: #F7F7F7;
     --clr-neutral-400: #999999;
     --clr-neutral-600: #6C7C9A;
     --clr-neutral-800: #273A40;
@@ -37,7 +37,7 @@ body {
 
 header {
     position: fixed;
-    background-color: inherit;
+    background-color: var(--clr-neutral-200);
     top: 0;
     width: calc(100% - 2rem);
     padding: 0 1rem;
@@ -312,6 +312,32 @@ header {
     Utils 
 -------- **/
 
+.blob {
+    position: absolute;
+    z-index: -1;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2000px;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg id="Group_854" data-name="Group 854" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366" height="684.192" viewBox="0 0 1366 684.192"><defs><clipPath id="clip-path"><rect id="Rectangle_811" data-name="Rectangle 811" width="1366" height="684.192" fill="%23F7F7F7"/></clipPath></defs><g id="Group_853" data-name="Group 853" clip-path="url(%23clip-path)"><path id="Path_1879" data-name="Path 1879" d="M1366,0V215.33a1090.527,1090.527,0,0,1-118.25,180C1123.86,548.27,917.8,656.74,721.22,676.62c-113.81,11.52-230.58,12.85-340.73-17.27a604.962,604.962,0,0,1-165.4-73.25C118.29,524.35,41.42,432.07,0,327.51V0Z" fill="%23F7F7F7"/></g></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+ 
+.dark .blob {
+    position: absolute;
+    z-index: -1;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2000px;
+    height: 100%;
+    background: url(/assets/blob-background.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .subtitulo {
     font-size: 2rem;
     font-weight: bold;
@@ -497,3 +523,11 @@ header {
         transition: none;
     }
 } */
+
+/* -- modal / dialog --*/
+.modal {
+    max-width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    color: var(--clr-neutral-800);
+    background-color: var(--clr-neutral-100);
+}

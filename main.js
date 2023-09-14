@@ -49,3 +49,15 @@ window.addEventListener('scroll', function() {
     parallax.style.top = 200 - value * 0.5 + 'px';
     parallax.style.left = 350 - value * 0.2 + 'px';
 })
+
+
+//dialog
+
+const dialog = document.getElementById('modal');
+const btnDialog = document.querySelectorAll('#btnCta')
+
+btnDialog.forEach(button => {
+    button.addEventListener('click', () => {
+        dialog.showModal();
+    });
+});
