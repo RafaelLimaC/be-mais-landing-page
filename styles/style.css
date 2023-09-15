@@ -157,8 +157,13 @@ header {
 	transform: translateX(22px);
 }
 
+.dark .header-toggle .fa-moon {
+	color: var(--clr-neutral-100);
+    font-size: 0.875rem;
+}
+
 .header-toggle .fa-moon {
-	color: #FFFFFF;
+	color: var(--clr-neutral-800);
     font-size: 0.875rem;
 }
 
@@ -211,7 +216,7 @@ dialog > * {
 }
 
 .modal form {
-    padding: 2rem 0;
+    padding: 2rem 0 1rem;
     display: flex;
     gap: 1.25rem;
     flex-direction: column;
@@ -220,6 +225,7 @@ dialog > * {
 .modal-btn {
     display: flex;
     gap: 1rem;
+    padding: .5rem 0;
 }
 
 .modal-btn button {
@@ -228,7 +234,7 @@ dialog > * {
     cursor: pointer;
     padding: 1em 3em;
     font-size: 0.8rem;
-    border-radius: 9999px;
+    border-radius: 10px;
     box-shadow: none;
     transition: box-shadow 0.2s;
     text-transform: uppercase;

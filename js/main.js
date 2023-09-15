@@ -20,17 +20,14 @@ function toggleLogo(logo) {
 
 function handleLogoClick() {
     logos.forEach(logo => {
-        logo.addEventListener('click', () => {
-            toggleLogo(logo);
-        });
+        toggleLogo(logo);
     });
 }
 
 chk.addEventListener('change', () => {
 	toggleDarkMode();
-    logos.forEach(logo => {
-        toggleLogo(logo);
-    })
+    handleLogoClick();
+    
 });
 
 // navbar link active
