@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Be+</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="/styles/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="/main.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -140,20 +144,50 @@
         </section>
 
         <section class="clientes" id="clientes">
-            <div class="clientes-wrapper">
+            <div class="clientes-wrapper swiper mySwiper">
                 <h2 class="clientes-titulo">Nossos Clientes</h3>
-                <div class="clientes-conteudo">
-                    <div>
-                        <img src="/assets/testimonial/LizaMond.png" alt="">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide clientes-conteudo">
+                        <div>
+                            <img src="/assets/testimonial/LizaMond.png" alt="">
+                        </div>
+                        <div class="clientes-testimonial">
+                            <svg class="clientes-img__empresa">
+                                <use id="greenpeace" xlink:href="/assets/testimonial/greenpeace.svg#greenpeace"></use>
+                            </svg>
+                            <p class="clientes-texto">A parceria com a BE+ foi um divisor de águas na gestão financeira do Greenpeace. Com sua expertise e soluções inovadoras, conseguimos otimizar nossos processos, reduzir custos operacionais e direcionar mais recursos para as causas que defendemos. Obrigado, BE+!</p>
+                            <span class="clientes-nome">Liza Mond - Greenpeace</span>
+                        </div>
                     </div>
-                    <div class="clientes-testimonial">
-                        <svg class="clientes-img__empresa">
-                            <use id="greenpeace" xlink:href="/assets/testimonial/greenpeace.svg#greenpeace"></use>
-                        </svg>
-                        <p class="clientes-texto">A parceria com a BE+ foi um divisor de águas na gestão financeira do Greenpeace. Com sua expertise e soluções inovadoras, conseguimos otimizar nossos processos, reduzir custos operacionais e direcionar mais recursos para as causas que defendemos. Obrigado, BE+!</p>
-                        <span class="clientes-nome">Liza Mond - Greenpeace</span>
+    
+                    <div class="swiper-slide clientes-conteudo">
+                        <div>
+                            <img class="clientes-foto" src="/assets/testimonial/LizaMond.png" alt="">
+                        </div>
+                        <div class="clientes-testimonial">
+                            <svg class="clientes-img__empresa">
+                                <use id="greenpeace" xlink:href="/assets/testimonial/greenpeace.svg#greenpeace"></use>
+                            </svg>
+                            <p class="clientes-texto">A parceria com a BE+ foi um divisor de águas na gestão financeira do Greenpeace. Com sua expertise e soluções inovadoras, conseguimos otimizar nossos processos, reduzir custos operacionais e direcionar mais recursos para as causas que defendemos. Obrigado, BE+!</p>
+                            <span class="clientes-nome">Zé Mond - Greenpeace</span>
+                        </div>
+                    </div>
+    
+                    <div class="swiper-slide clientes-conteudo">
+                        <div>
+                            <img src="/assets/testimonial/LizaMond.png" alt="">
+                        </div>
+                        <div class="clientes-testimonial">
+                            <svg class="clientes-img__empresa">
+                                <use id="greenpeace" xlink:href="/assets/testimonial/greenpeace.svg#greenpeace"></use>
+                            </svg>
+                            <p class="clientes-texto">A parceria com a BE+ foi um divisor de águas na gestão financeira do Greenpeace. Com sua expertise e soluções inovadoras, conseguimos otimizar nossos processos, reduzir custos operacionais e direcionar mais recursos para as causas que defendemos. Obrigado, BE+!</p>
+                            <span class="clientes-nome">
+                                Flávin Mond - Greenpeace</span>
+                        </div>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -175,5 +209,8 @@
             <img src="/assets/whatsapp_icon.svg" alt="">
         </a>
     </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 </body>
 </html>

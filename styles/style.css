@@ -349,7 +349,7 @@ header {
 .clientes-conteudo {
     display: flex;
     align-items: center;
-    padding: 3rem 10%;
+    padding: 2.5rem 10% 6rem 10%;
     gap: 3rem;
 }
 
@@ -408,6 +408,28 @@ header {
     color: var(--clr-primary-400);
     font-size: 3.75rem;
     line-height: 0;
+}
+
+.swiper-slide  {
+    width: fit-content !important;
+}
+
+.swiper-pagination {
+    bottom: 25px !important;
+}
+
+.swiper-pagination > * {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin: 0 0.5rem !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgba(0 0 0 / 0.5);
+}
+
+.dark .swiper-pagination-bullet {
+    background-color: rgba(255 255 255 / 1);
 }
 
 /** --------------
