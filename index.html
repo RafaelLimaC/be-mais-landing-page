@@ -18,7 +18,7 @@
 <body>
     <header>
         <div class="header-wrapper">
-            <img class="header-logo" id="logo" src="/assets/logo-header.svg" alt="">
+            <img class="header-logo" id="logo" src="/assets/logo-header-dark.svg" alt="">
             <div class="header-nav__wrapper">
                 <nav class="header-nav">
                     <ul>
@@ -191,18 +191,52 @@
             </div>
         </section>
 
-        <div>
-            <dialog id="modal" class="modal">
-                <p>Greetings, one and all!</p>
-                <form method="dialog">
-                  <button>OK</button>
-                </form>
-            </dialog>
-        </div>
-
+        <dialog id="modal" class="modal">
+            <h2 class="clientes-titulo">Contato</h3>
+            <p>Preencha suas informações e nossos consultores <br>entrarão em contato dentro de 72 horas</p>
+            <form action="">
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="Email">
+                <input type="tel" placeholder="Tel">
+                <select>
+                    <option value="" disabled selected>Como prefere ser contactado?</option>
+                    <option value="Whatsapp">Whatsapp</option>
+                    <option value="Email">Email</option>
+                    <option value="Ligacao">Ligação</option>
+                </select>
+                <div class="modal-btn">
+                    <button class="cancelar" type="submit" formmethod="dialog">Cancelar</button>
+                    <button class="enviar" type="submit">Enviar</button>
+                </div>
+            </form>
+        </dialog>
     </main>
     <footer>
-        
+        <div class="footer-wrapper">
+            <div class="footer-logo-wrapper">
+                <img class="footer-logo" id="logo" src="/assets/logo-header-dark.svg" alt="">
+                <span>Assessoria financeira</span>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li><a class="nav-link" href="#servicos">Serviços</a> </li>
+                    <li><a class="nav-link" href="#clientes">Clientes</a></li>
+                    <li><a class="nav-link" id="btnCta">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <span>End: Av. Logo ali, 999</span>
+                <span>Tel: +5548 99993 4444</span>
+            </div>
+            <div class="footer-social">
+                <span>Instagram</span>
+                <span>Whatsapp</span>
+                <span>Linkedin</span>
+            </div>
+        </div>
+
+        <div class="footer-detalhe-svg"></div>
     </footer>
     <div class="whatsapp">
         <a href="https://wa.me/5548999934444" target="_blank">

@@ -1,16 +1,16 @@
 // toggleDarkMode()
 
 const chk = document.getElementById('chk');
-const logo = document.getElementById('logo')
+const logos = document.querySelectorAll('#logo')
 
 function toggleDarkMode() {
     document.body.classList.toggle('dark');
 }
 
 toggleDarkMode()
-toggleLogo()
+handleLogoClick()
 
-function toggleLogo() {
+function toggleLogo(logo) {
     if (logo.getAttribute('src') == "/assets/logo-header.svg") {
       logo.setAttribute('src', "/assets/logo-header-dark.svg");
     } else {
@@ -18,9 +18,19 @@ function toggleLogo() {
     }
 }
 
+function handleLogoClick() {
+    logos.forEach(logo => {
+        logo.addEventListener('click', () => {
+            toggleLogo(logo);
+        });
+    });
+}
+
 chk.addEventListener('change', () => {
 	toggleDarkMode();
-    toggleLogo();
+    logos.forEach(logo => {
+        toggleLogo(logo);
+    })
 });
 
 // navbar link active
@@ -80,6 +90,7 @@ btnDialog.forEach(button => {
         dialog.showModal();
     });
 });
+
 
 // swiper 
 

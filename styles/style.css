@@ -22,8 +22,13 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 }
 
+html, body {
+    min-height: 100%;
+}
+
 html {
     scroll-behavior: smooth;
+    height: calc(100% - 85.98px);
 }
 
 body {
@@ -162,9 +167,99 @@ header {
     font-size: 0.875rem;
 }
 
-/** ---------
-    Slider
---------- **/
+/** ------------
+  Modal dialog
+------------ **/
+
+dialog > * {
+    box-sizing: border-box;
+}
+
+.modal {
+    box-sizing: border-box;
+    max-width: 360px;
+    width: 100%;
+    height: fit-content;
+    border-radius: 25px;
+    border: none;
+    color: var(--clr-neutral-800);
+    background-color: var(--clr-neutral-100);
+    border: 1px solid var(--clr-neutral-400);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.modal .clientes-titulo {
+    padding: 1rem 0 1.5rem;
+}
+
+.dark .modal {
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-neutral-900);
+}
+
+.modal::backdrop {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.modal p {
+    padding: 1rem 0 1rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--clr-neutral-400);
+}
+
+.modal form {
+    padding: 2rem 0;
+    display: flex;
+    gap: 1.25rem;
+    flex-direction: column;
+}
+
+.modal-btn {
+    display: flex;
+    gap: 1rem;
+}
+
+.modal-btn button {
+    width: 100%;
+
+    cursor: pointer;
+    padding: 1em 3em;
+    font-size: 0.8rem;
+    border-radius: 9999px;
+    box-shadow: none;
+    transition: box-shadow 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+
+}
+
+.modal-btn .cancelar {
+    background-color: var(--clr-neutral-200);
+    color: var(--clr-neutral-800);
+    border: 1px solid var(--clr-neutral-600);
+}
+
+.dark .modal-btn .cancelar {
+    background-color: var(--clr-neutral-800);
+    color: var(--clr-neutral-100);
+}
+
+.modal-btn .enviar {
+    background-color: var(--clr-accent-400);
+    color: var(--clr-neutral-100);
+}
+
+.modal-btn .enviar:hover {
+    box-shadow: 0px 3px 16px #FD6F4D80;
+}
+
+/** ---------------
+  infinite Slider
+--------------- **/
 
 .slider-wrapper {
     background-color: var(--clr-neutral-200);
@@ -432,6 +527,96 @@ header {
     background-color: rgba(255 255 255 / 1);
 }
 
+/** ----------
+  CSS footer
+---------- **/
+
+footer {
+    background-color: var(--clr-neutral-200);
+    position: relative;
+}
+
+.footer-wrapper {
+    max-width: 1040px;
+    margin: 4.5rem auto 0 auto;
+    padding: 3rem 1rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo-wrapper {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.footer-logo-wrapper span {
+    text-transform: uppercase;
+}
+
+.footer-logo {
+    width: 150px;
+}
+
+.dark footer {
+    background-color: var(--clr-neutral-800);
+}
+
+.footer-detalhe-svg {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    background-image: url(/assets/img-footer.svg);
+}
+
+
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-transform: uppercase;
+    color: var(--clr-neutral-600);
+
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.footer-nav ul li {
+    cursor: pointer;
+}
+
+.footer-nav ul li a {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: var(--clr-neutral-600);
+}
+
+.dark .footer-nav li:hover a,
+.dark .footer-info span:hover,
+.dark .footer-social span:hover {
+    color: var(--clr-neutral-100);
+}
+
+.footer-nav li:hover a,
+.footer-info span:hover,
+.footer-social span:hover {
+    color: var(--clr-neutral-900);
+}
+
+.footer-info,
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.footer-info span,
+.footer-social span {
+    color: var(--clr-neutral-600);
+}
+
 /** --------------
     Dark theme 
 -------------- **/
@@ -683,11 +868,3 @@ header {
         transition: none;
     }
 } */
-
-/* -- modal / dialog --*/
-.modal {
-    max-width: 400px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
-    color: var(--clr-neutral-800);
-    background-color: var(--clr-neutral-100);
-}
