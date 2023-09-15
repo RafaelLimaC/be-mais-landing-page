@@ -193,8 +193,23 @@ dialog > * {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-.modal .clientes-titulo {
-    padding: 1rem 0 1.5rem;
+.contato-titulo {
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.5rem 0 1.25rem 0;
+    position: relative;
+}
+
+.contato-titulo::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 57px;
+    height: 4px;
+    background-color: var(--clr-primary-400);   
 }
 
 .dark .modal {
@@ -210,16 +225,60 @@ dialog > * {
 
 .modal p {
     padding: 1rem 0 1rem 0;
+    line-height: 1.5;
     text-align: center;
     font-size: 0.875rem;
     color: var(--clr-neutral-400);
 }
 
 .modal form {
-    padding: 2rem 0 1rem;
+    padding: 2rem 0 0;
     display: flex;
     gap: 1.25rem;
     flex-direction: column;
+}
+
+.modal form input,
+.modal form select {
+    border: 2px solid var(--clr-neutral-400);
+    padding: 1rem 1.25rem;
+    border-radius: 999px;
+}
+
+.dark .modal form input,
+.dark .modal form select {
+    border: 2px solid var(--clr-neutral-100);
+    background-color: var(--clr-neutral-800);
+    color: var(--clr-neutral-100);
+}
+
+.modal form input {
+    width: calc(100% - 3rem);
+}
+
+.select-container {
+    width: calc(100% - 4px);
+    position: relative;
+}
+
+.input-select {
+    width: 100%;
+}
+
+.input-container {
+    position: relative;
+}
+
+.modal form i {
+    position: absolute;
+    right: 1.75rem;
+    transform: translateY(100%);
+    color: var(--clr-primary-400);
+    z-index: 2;
+}
+
+.modal select {
+    appearance: none;
 }
 
 .modal-btn {
@@ -234,7 +293,7 @@ dialog > * {
     cursor: pointer;
     padding: 1em 3em;
     font-size: 0.8rem;
-    border-radius: 10px;
+    border-radius: 999px;
     box-shadow: none;
     transition: box-shadow 0.2s;
     text-transform: uppercase;

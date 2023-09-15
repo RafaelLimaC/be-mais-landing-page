@@ -192,18 +192,30 @@
         </section>
 
         <dialog id="modal" class="modal">
-            <h2 class="clientes-titulo">Contato</h3>
+            <h2 class="contato-titulo">Contato</h3>
             <p>Preencha suas informações e nossos consultores <br>entrarão em contato dentro de 72 horas</p>
             <form action="">
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="Email">
-                <input type="tel" placeholder="Tel">
-                <select>
-                    <option value="" disabled selected>Como prefere ser contactado?</option>
-                    <option value="Whatsapp">Whatsapp</option>
-                    <option value="Email">Email</option>
-                    <option value="Ligacao">Ligação</option>
-                </select>
+                <div class="input-container">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Nome">
+                </div>
+                <div class="input-container">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-container">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" placeholder="Telefone">
+                </div>
+                <div class="select-container">
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <select class="input-select">
+                        <option value="" disabled selected>Como prefere ser contactado?</option>
+                        <option value="Whatsapp">Whatsapp</option>
+                        <option value="Email">Email</option>
+                        <option value="Ligacao">Ligação</option>
+                    </select>
+                </div>
                 <div class="modal-btn">
                     <button class="cancelar" type="submit" formmethod="dialog">Cancelar</button>
                     <button class="enviar" type="submit">Enviar</button>
