@@ -243,6 +243,7 @@ dialog > * {
     border: 2px solid var(--clr-neutral-400);
     padding: 1rem 1.25rem;
     border-radius: 999px;
+    outline: none;
 }
 
 .dark .modal form input,
@@ -254,6 +255,13 @@ dialog > * {
 
 .modal form input {
     width: calc(100% - 3rem);
+}
+
+.modal input:focus,
+.modal select:focus,
+.dark .modal input:focus,
+.dark .modal select:focus {
+    border: 2px solid var(--clr-primary-400);
 }
 
 .select-container {
@@ -289,7 +297,7 @@ dialog > * {
 
 .modal-btn button {
     width: 100%;
-
+    font-weight: var(--fw-bold);
     cursor: pointer;
     padding: 1em 3em;
     font-size: 0.8rem;
@@ -604,7 +612,7 @@ footer {
 .footer-wrapper {
     max-width: 1040px;
     margin: 4.5rem auto 0 auto;
-    padding: 3rem 1rem;
+    padding: 3rem 1rem 8rem 1rem;
 
     display: flex;
     justify-content: space-between;
@@ -618,6 +626,7 @@ footer {
 
 .footer-logo-wrapper span {
     text-transform: uppercase;
+    color: var(--clr-neutral-600);
 }
 
 .footer-logo {
@@ -630,9 +639,14 @@ footer {
 
 .footer-detalhe-svg {
     position: absolute;
-    width: fit-content;
-    height: fit-content;
-    background-image: url(/assets/img-footer.svg);
+    top: 0;
+    right: 0;
+    transform: rotate(-90deg);
+}
+
+.footer-detalhe-svg img {
+    width: 100px;
+    overflow: hidden;
 }
 
 
