@@ -80,6 +80,7 @@ window.addEventListener('scroll', function() {
 //dialog
 
 const dialog = document.getElementById('modal');
+const close = document.getElementById('btnClose');
 const btnDialog = document.querySelectorAll('#btnCta')
 
 btnDialog.forEach(button => {
@@ -87,6 +88,11 @@ btnDialog.forEach(button => {
         dialog.showModal();
     });
 });
+
+close.addEventListener('click', (e) => {
+    e.preventDefault();
+    dialog.close();
+})
 
 
 // swiper 

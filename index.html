@@ -194,22 +194,22 @@
         <dialog id="modal" class="modal">
             <h2 class="contato-titulo">Contato</h3>
             <p>Preencha suas informações e nossos consultores <br>entrarão em contato dentro de 72 horas</p>
-            <form action="">
+            <form action="https://formsubmit.co/contato@bemaisbpo.com.br" method="POST">
                 <div class="input-container">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Nome">
+                    <input type="text" name="Nome" placeholder="Nome" required>
                 </div>
                 <div class="input-container">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="email" placeholder="Email">
+                    <input type="email" name="Email" placeholder="Email" required>
                 </div>
                 <div class="input-container">
                     <i class="fa-solid fa-phone"></i>
-                    <input type="tel" placeholder="Telefone">
+                    <input type="tel" name="Telefone" placeholder="Telefone" required>
                 </div>
                 <div class="select-container">
                     <i class="fa-solid fa-chevron-down"></i>
-                    <select class="input-select">
+                    <select class="input-select" name="Como prefere ser contactado?" required>
                         <option value="" disabled selected>Como prefere ser contactado?</option>
                         <option value="Whatsapp">Whatsapp</option>
                         <option value="Email">Email</option>
@@ -217,7 +217,7 @@
                     </select>
                 </div>
                 <div class="modal-btn">
-                    <button class="cancelar" type="submit" formmethod="dialog">Cancelar</button>
+                    <button class="cancelar" id="btnClose">Cancelar</button>
                     <button class="enviar" type="submit">Enviar</button>
                 </div>
             </form>
