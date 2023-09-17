@@ -191,10 +191,23 @@
             </div>
         </section>
 
+        <!-- https://lottie.host/363f2334-afef-40d3-bd94-b90677ac2f46/Qhi2DDuMvr.json -->
+
         <dialog id="modal" class="modal">
+            <div class="lottie" id="lottie">
+                <dotlottie-player 
+                    src="https://lottie.host/363f2334-afef-40d3-bd94-b90677ac2f46/Qhi2DDuMvr.json" 
+                    background="#FD6F4D" 
+                    speed="1" 
+                    direction="1" 
+                    mode="normal" 
+                    loop 
+                    autoplay>
+                </dotlottie-player>
+            </div>
             <h2 class="contato-titulo">Contato</h3>
             <p>Preencha suas informações e nossos consultores <br>entrarão em contato dentro de 72 horas</p>
-            <form action="https://formsubmit.co/contato@bemaisbpo.com.br" method="POST">
+            <form id="form" action="https://formsubmit.co/contato@bemaisbpo.com.br" method="POST">
                 <div class="input-container">
                     <i class="fa-solid fa-user"></i>
                     <input type="text" name="Nome" placeholder="Nome" required>
@@ -218,7 +231,7 @@
                 </div>
                 <div class="modal-btn">
                     <button class="cancelar" id="btnClose">Cancelar</button>
-                    <button class="enviar" type="submit">Enviar</button>
+                    <button class="enviar" onclick="loadingScreen()" type="submit">Enviar</button>
                 </div>
             </form>
         </dialog>
@@ -256,6 +269,7 @@
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 
 </body>
 </html>

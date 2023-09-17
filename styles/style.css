@@ -191,6 +191,7 @@ dialog > * {
     background-color: var(--clr-neutral-100);
     border: 1px solid var(--clr-neutral-400);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .contato-titulo {
@@ -328,6 +329,21 @@ dialog > * {
 
 .modal-btn .enviar:hover {
     box-shadow: 0px 3px 16px #FD6F4D80;
+}
+
+.lottie {
+    position: absolute;
+    border-radius: 15px;
+    height: calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    overflow: hidden;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.lottie-load {
+    opacity: 1;
 }
 
 /** ---------------

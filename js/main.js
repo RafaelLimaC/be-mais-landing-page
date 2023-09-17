@@ -110,3 +110,13 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
  });
+
+ //
+
+const lottie = document.getElementById('lottie');
+
+function loadingScreen() {
+    if (form.checkValidity()) {
+        lottie.classList.add('lottie-load');
+    }
+}
