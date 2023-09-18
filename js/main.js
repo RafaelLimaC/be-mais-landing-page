@@ -72,10 +72,9 @@ const parallax = document.getElementById('parallax');
 
 window.addEventListener('scroll', function() {
     let value = window.scrollY;
-    parallax.style.top = 200 - value * 0.5 + 'px';
-    parallax.style.left = 350 - value * 0.2 + 'px';
+    parallax.style.top = (bg.offsetHeight * 0.4) - value * 0.5 + 'px';
+    parallax.style.left = (bg.offsetWidth * 0.7) - value * 0.2 + 'px';
 })
-
 
 //dialog
 
