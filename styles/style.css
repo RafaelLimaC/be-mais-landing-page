@@ -47,6 +47,45 @@ main {
     overflow-x: hidden;
 }
 
+main {
+    background: url(/assets/blob-haikei-light.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100vw;
+}
+
+.dark main {
+    background: url(/assets/blob-haikei-dark.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100vw;
+}
+
+@media (max-width: 1000px) {
+    main {
+        background-size: 120% 150vw;
+    }
+    .dark main {
+        background-size: 120% 150vw;
+    }
+}
+
+@media (max-width: 900px) {
+    main {
+        background-size: 100% 200vw;
+    }
+    .dark main {
+        background-size: 100% 200vw;
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        background-size: 150% 250vw;
+    }
+    .dark main {
+        background-size: 150% 250vw;
+    }
+}
+
 /** --------------
     CSS header 
 -------------- **/
