@@ -607,6 +607,18 @@ dialog > * {
         padding: 3rem 1rem;
         grid-area: 1 / 1 / 2 / 2;
         width: 100%;
+        text-align: center;
+    }
+
+    .slider-about p::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 57px;
+        height: 5px;
+        background-color: var(--clr-primary-400);   
     }
 
     .slider {
@@ -837,6 +849,8 @@ dialog > * {
 
     .liberte-content {
         padding: 2rem 0.7rem;
+        align-items: center;
+        text-align: center;
     }
     
     .liberte-content h2 {
