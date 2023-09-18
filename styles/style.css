@@ -976,10 +976,15 @@ footer {
     position: relative;
 }
 
+.hero .hero-img {
+    max-width: 540px;
+    width: 100%;
+}
+
 .parallax {
     position: absolute;
-    top: 200px;
-    left: 350px;
+    top: 40%;
+    left: 70%;
 }
 
 .section-cta h1 {
