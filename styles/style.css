@@ -512,8 +512,8 @@ dialog > * {
 
 .clientes {
     max-width: 1040px;
-    margin: 8rem auto;
-    padding: 0 1rem;
+    margin: 0 auto;
+    padding: 8rem 1rem;
 
     display: flex;
     align-items: center;
@@ -616,22 +616,90 @@ dialog > * {
     background-color: rgba(255 255 255 / 1);
 }
 
+/** ---------------
+  section liberte
+--------------- **/
+
+
+.liberte-wrapper {
+    background-color: var(--clr-neutral-200);
+
+    display: grid;
+    grid-template-columns: minmax(1rem, calc((100vw - 1040px) / 2)) 1fr 50%;
+    align-items: center;
+}
+
+.dark .liberte-wrapper {
+    background-color: var(--clr-neutral-800);;
+}
+
+.liberte-space {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.liberte-content {
+    display: flex;
+    background-color: inherit;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    grid-area: 1 / 2 / 2 / 3; 
+}
+
+.liberte-content h2 {
+    font-size: 3rem;
+    line-height: 1.5;
+    max-width: 15ch;
+    font-weight: var(--fw-bold);
+}
+
+.liberte-content h2 strong {
+    color: var(--clr-primary-400);
+}
+
+.liberte-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--clr-neutral-400);
+    max-width: 55ch;
+    padding-bottom: 0.5rem;
+}
+
+.liberte-img { 
+    grid-area: 1 / 3 / 2 / 4;
+    justify-self: end;
+    width: 100%;
+}
+
+.liberte-img img {
+    text-align: right;
+    width: 100%;
+    max-height: 540px;
+    object-fit: cover;
+    object-position: top left;
+}
+
 /** ----------
   CSS footer
 ---------- **/
 
 footer {
-    background-color: var(--clr-neutral-200);
+    background-color: var(--clr-neutral-100);
     position: relative;
+}
+
+.dark footer {
+    background-color: var(--clr-neutral-900);
 }
 
 .footer-wrapper {
     max-width: 1040px;
-    margin: 4.5rem auto 0 auto;
+    margin: 0 auto 0 auto;
     padding: 3rem 1rem 8rem 1rem;
 
     display: flex;
     justify-content: space-between;
+    gap: 0.5rem;
 }
 
 .footer-logo-wrapper {
@@ -647,17 +715,14 @@ footer {
 
 .footer-logo {
     width: 150px;
-}
-
-.dark footer {
-    background-color: var(--clr-neutral-800);
+    z-index: 2;
 }
 
 .footer-detalhe-svg {
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: rotate(-90deg);
+    bottom: 0;
+    left: 0;
+    transform: rotate(90deg);
 }
 
 .footer-detalhe-svg img {
@@ -690,13 +755,13 @@ footer {
 
 .dark .footer-nav li:hover a,
 .dark .footer-info span:hover,
-.dark .footer-social span:hover {
+.dark .footer-social i:hover {
     color: var(--clr-neutral-100);
 }
 
 .footer-nav li:hover a,
 .footer-info span:hover,
-.footer-social span:hover {
+.footer-social i:hover {
     color: var(--clr-neutral-900);
 }
 
@@ -708,8 +773,13 @@ footer {
 }
 
 .footer-info span,
-.footer-social span {
+.footer-social i {
     color: var(--clr-neutral-600);
+}
+
+.footer-social i {
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 /** --------------
