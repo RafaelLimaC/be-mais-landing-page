@@ -954,17 +954,26 @@ footer {
 }
 
 .footer-social i {
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
 @media (max-width: 500px) {
+    .footer-logo-wrapper {
+        align-items: center;
+    }
+
+    .footer-logo {
+        width: 100px;
+        z-index: 2;
+        text-align: center;
+    }
+
     .footer-wrapper {
-        margin: 0 auto 0 auto;
         padding: 3rem 0.7rem 8rem 0.7rem;
     
-        display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 3rem;
     }
     
@@ -979,9 +988,8 @@ footer {
         flex-direction: row;
     }
 
-    .footer-nav ul {
-        font-size: 1.5rem;
-        flex-wrap: wrap;
+    .footer-nav {
+        display: none;
     }
 }
 
