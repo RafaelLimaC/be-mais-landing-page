@@ -111,7 +111,7 @@ var swiper = new Swiper(".mySwiper", {
     },
  });
 
- //
+// loading screen
 
 const lottie = document.getElementById('lottie');
 
@@ -120,3 +120,20 @@ function loadingScreen() {
         lottie.classList.add('lottie-load');
     }
 }
+
+// hamburger menu
+
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.header-nav__wrapper');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+})
+
+document.querySelectorAll('.nav-link').forEach(n =>
+    n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+    })
+)
