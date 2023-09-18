@@ -85,7 +85,7 @@ header {
     background-color: var(--clr-neutral-200);
 }
 
-@media (max-width: 899px) {
+@media (max-width: 900px) {
     .hamburger {
         display: block;
     }
@@ -1073,6 +1073,12 @@ footer {
     line-height: 0;
 }
 
+@media (max-width: 900px) {
+    .subtitulo {
+        padding: 6rem 0 2rem 0;
+    }
+}
+
 /* section */
 .section-wrapper {
     max-width: 1040px;
@@ -1107,6 +1113,11 @@ footer {
 }
 
 .hero .hero-img {
+    max-width: 540px;
+    width: 100%;
+}
+
+.cta-img {
     max-width: 540px;
     width: 100%;
 }
@@ -1164,6 +1175,68 @@ footer {
     line-height: 2;
 }
 
+@media (max-width: 900px) {
+    .section-wrapper {
+        max-width: 1040px;
+        margin: 4.5rem auto;
+        padding: 0 1rem;
+    
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .section-cta {
+        align-items: center;
+    }
+
+    .section-cta h2::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 57px;
+        height: 5px;
+        background-color: var(--clr-primary-400);   
+    }
+
+    .section-cta h1,
+    .section-cta p {
+        text-align: center;
+    }
+    
+    .hero {
+        padding-top: 7.5rem;
+        padding-bottom: 2.5rem;
+        margin: 0 auto;
+        overflow: visible;
+        flex-direction: column;
+    }
+    
+    .section-wrapper__reverse {
+        flex-direction: column-reverse
+    }
+}
+
+@media (max-width: 500px) {
+    .section-cta h1 {
+        font-size: 2.25rem;
+    }
+
+    .section-cta p {
+        font-size: 0.75rem;
+    }
+
+    .section-cta h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .section-cta .content {
+        font-size: 0.75rem;
+    }
+}
+
 /* button cta */
 
 .cta-button {
@@ -1195,6 +1268,12 @@ footer {
 .whatsapp img {
     max-width: 70px;
     max-height: 70px;
+}
+
+@media (max-width: 500px) {
+    .cta-button {
+        padding: 1em 1.5em;
+    }
 }
 
 /* -- hidden / show -- */
