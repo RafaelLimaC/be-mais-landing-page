@@ -342,12 +342,26 @@ dialog > * {
     -webkit-backdrop-filter: blur(5px);
 }
 
-.modal p {
-    padding-top: 2rem;
+.modal p,
+.modal span {
     line-height: 1.5;
     text-align: center;
     font-size: 0.875rem;
     color: var(--clr-neutral-400);
+    display: block;
+    padding-bottom: 0.7rem;
+}
+
+.modal span {
+    color: var(--clr-neutral-900);
+}
+
+.dark .modal span {
+    color: var(--clr-neutral-100);
+}
+
+.modal p {
+    padding-top: 2rem;
 }
 
 .modal form {
@@ -633,7 +647,6 @@ dialog > * {
     }
 }
 
-
 @media (max-width: 600px) {
     .slider-wrapper {
         height: fit-content;
@@ -680,7 +693,6 @@ dialog > * {
         top: 1.5rem;
         width: 30px;
     }
-    
 }
 
 /** ----------------
@@ -938,19 +950,20 @@ footer {
     max-width: 1040px;
     width: 100%;
     margin: 0 auto 0 auto;
-    padding: 3rem 1rem 8rem 1rem;
+    padding: 3rem 1rem 3rem 1rem;
     box-sizing: border-box;
 
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+
+    color: var(--clr-neutral-600);
 }
 
 .footer-creditos {
     color: var(--clr-neutral-600);
     text-align: center;
-    line-height: 1.5;
 }
 
 .footer-creditos a {
