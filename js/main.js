@@ -7,9 +7,6 @@ function toggleDarkMode() {
     document.body.classList.toggle('dark');
 }
 
-toggleDarkMode()
-handleLogoClick()
-
 function toggleLogo(logo) {
     if (logo.getAttribute('src') == "/assets/logo-header.svg") {
       logo.setAttribute('src', "/assets/logo-header-dark.svg");
@@ -26,8 +23,7 @@ function handleLogoClick() {
 
 chk.addEventListener('change', () => {
 	toggleDarkMode();
-    handleLogoClick();
-    
+    handleLogoClick();  
 });
 
 // navbar link active
