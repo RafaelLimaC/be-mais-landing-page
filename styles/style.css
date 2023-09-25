@@ -1387,3 +1387,7 @@ footer {
         transition: none;
     }
 }
+
+p {
+    letter-spacing: 0.05em;
+}
