@@ -710,6 +710,37 @@ dialog > * {
 }
 
 /** ----------------
+  Slider marcas
+---------------- **/
+
+.slider-marcas__wrapper {
+    display: flex;
+    animation: 13s slidemarcas infinite linear;
+}
+
+.slider-marcas__container {
+    display: flex;
+}
+
+.card-marcas {
+    padding-right: 2rem;
+}
+
+.slider-marcas:hover .slider-marcas__wrapper {
+    animation-play-state: paused;
+}
+
+
+@keyframes slidemarcas {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-202px * 10));
+    }
+}
+
+/** ----------------
   section clientes 
 ---------------- **/
 

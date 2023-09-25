@@ -55,10 +55,13 @@ const observer = new IntersectionObserver((entries) => {
 
 hiddenElements.forEach((el) => observer.observe(el));
 
-// clonar slider p/ efeito infinito
+// clonar slider p/ efeito infinito - slider marcas e slider de serviços
 
 const copy = document.querySelector(".card-wrapper").cloneNode(true);
+const copyMarcas = document.querySelector(".slider-marcas__container").cloneNode(true);
+
 document.querySelector(".auto-slider").appendChild(copy);
+document.querySelector(".slider-marcas__wrapper").appendChild(copyMarcas);
 
 
 // parallax
