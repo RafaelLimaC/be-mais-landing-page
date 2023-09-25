@@ -715,7 +715,8 @@ dialog > * {
 
 .slider-marcas__wrapper {
     display: flex;
-    animation: 13s slidemarcas infinite linear;
+    animation: 16s slidemarcas infinite linear;
+    padding: 3rem 0;
 }
 
 .slider-marcas__container {
