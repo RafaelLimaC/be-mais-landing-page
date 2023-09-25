@@ -724,7 +724,7 @@ dialog > * {
 }
 
 .card-marcas {
-    padding-right: 2rem;
+    padding-right: 3rem;
 }
 
 .slider-marcas:hover .slider-marcas__wrapper {
@@ -737,7 +737,7 @@ dialog > * {
         transform: translateX(0);
     }
     to {
-        transform: translateX(calc(-202px * 10));
+        transform: translateX(calc(-218px * 10));
     }
 }
 
